@@ -92,7 +92,7 @@
             // 
             // Operationpanel
             // 
-            Operationpanel.BackColor = Color.PeachPuff;
+            Operationpanel.BackColor = Color.LightSalmon;
             Operationpanel.Controls.Add(ProductManagerbutton);
             Operationpanel.Controls.Add(AddProductbutton);
             Operationpanel.Controls.Add(ProductManagementlabel);
@@ -159,7 +159,7 @@
             // 
             // Separator4
             // 
-            Separator4.BackColor = Color.PeachPuff;
+            Separator4.BackColor = Color.SaddleBrown;
             Separator4.Dock = DockStyle.Top;
             Separator4.Location = new Point(0, 414);
             Separator4.Name = "Separator4";
@@ -207,7 +207,7 @@
             // 
             // Separator3
             // 
-            Separator3.BackColor = Color.PeachPuff;
+            Separator3.BackColor = Color.Sienna;
             Separator3.Dock = DockStyle.Top;
             Separator3.Location = new Point(0, 301);
             Separator3.Name = "Separator3";
@@ -303,7 +303,7 @@
             // 
             // Separator1
             // 
-            Separator1.BackColor = Color.PeachPuff;
+            Separator1.BackColor = Color.SaddleBrown;
             Separator1.Dock = DockStyle.Top;
             Separator1.Location = new Point(0, 79);
             Separator1.Name = "Separator1";
@@ -312,7 +312,7 @@
             // 
             // AdminManagerbutton
             // 
-            AdminManagerbutton.BackColor = Color.FromArgb(255, 220, 180);
+            AdminManagerbutton.BackColor = Color.FromArgb(0, 192, 0);
             AdminManagerbutton.Dock = DockStyle.Top;
             AdminManagerbutton.FlatAppearance.BorderSize = 0;
             AdminManagerbutton.FlatStyle = FlatStyle.Flat;
@@ -326,7 +326,7 @@
             // 
             // AddAdminbutton
             // 
-            AddAdminbutton.BackColor = Color.FromArgb(255, 200, 200);
+            AddAdminbutton.BackColor = Color.Gray;
             AddAdminbutton.Dock = DockStyle.Top;
             AddAdminbutton.FlatAppearance.BorderSize = 0;
             AddAdminbutton.FlatStyle = FlatStyle.Flat;
