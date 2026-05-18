@@ -95,7 +95,8 @@ namespace SuperShop.View.Admin
                 conn.Open();
                 // Insert into USER table first
                 string userQuery = "INSERT INTO [USER] (UserID, UserType, Name, DateOfBirth, Gender, Phone, Email, Address, Username, Password, SecurityQuestion, SecurityAnswer, IsActive) " +
-                    "VALUES ('" + admin.UserID + "', 'Admin', '" + admin.Name + "', '" + admin.DateOfBirth.ToString("yyyy/MM/dd") + "', '" + admin.Gender + "', '" + admin.Phone + "', '" + admin.Email + "', '" + admin.Address + "', '" + admin.Username + "', '" + admin.Password + "', '" + admin.SecurityQuestion + "', '" + admin.SecurityAnswer + "', " + (admin.IsActive ? 1 : 0) + ")";
+                    "VALUES ('" + admin.UserID + "', 'Admin', '" + admin.Name + "', '" + admin.DateOfBirth.ToString("yyyy/MM/dd") + "', '" + admin.Gender + "', '" + admin.Phone + "', '" +
+                    admin.Email + "', '" + admin.Address + "', '" + admin.Username + "', '" + admin.Password + "', '" + admin.SecurityQuestion + "', '" + admin.SecurityAnswer + "', " + (admin.IsActive ? 1 : 0) + ")";
 
                 // Insert into ADMIN table
                 string adminQuery = "INSERT INTO [ADMIN] (AdminID, AdminType, UserID, Degree, CanManageAdmin, CanManageCustomer) " +
