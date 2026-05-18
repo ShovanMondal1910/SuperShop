@@ -159,7 +159,7 @@ namespace SuperShop.View.Customer
                 }
 
                 MessageBox.Show("Customer updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Showbutton_Click(null, EventArgs.Empty);
+                Showbutton_Click(this, EventArgs.Empty);
             }
             catch (SqlException sqlEx)
             {
@@ -206,7 +206,7 @@ namespace SuperShop.View.Customer
                 }
 
                 MessageBox.Show("Customer deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Showbutton_Click(null, EventArgs.Empty);
+                Showbutton_Click(this, EventArgs.Empty);
             }
             catch (SqlException sqlEx)
             {
@@ -218,7 +218,7 @@ namespace SuperShop.View.Customer
             }
         }
 
-        private void Clearbutton_Click(object sender, EventArgs e)
+        private void Clearbutton_Click(object? sender, EventArgs e)
         {
             // Clear all text boxes
             UserIDtextBox.Clear();

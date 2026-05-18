@@ -124,7 +124,7 @@ namespace SuperShop.View.POS
             CartProductListdataGridView.Columns["TOTAL"].HeaderText = "Total";
         }
 
-        private void ProductListdataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void ProductListdataGridView_CellDoubleClick(object? sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -226,7 +226,7 @@ namespace SuperShop.View.POS
             GrandTotalAmountlabel.Text = finalGrandTotal.ToString("F2");
         }
 
-        private void DiscounttextBox_TextChanged(object sender, EventArgs e)
+        private void DiscounttextBox_TextChanged(object? sender, EventArgs e)
         {
             if (isUpdatingDiscount)
                 return;
@@ -255,7 +255,7 @@ namespace SuperShop.View.POS
             }
         }
 
-        private void TaxtextBox_TextChanged(object sender, EventArgs e)
+        private void TaxtextBox_TextChanged(object? sender, EventArgs e)
         {
             if (isUpdatingTax)
                 return;
@@ -284,7 +284,7 @@ namespace SuperShop.View.POS
             }
         }
 
-        private void PaidAmounttextBox_TextChanged(object sender, EventArgs e)
+        private void PaidAmounttextBox_TextChanged(object? sender, EventArgs e)
         {
             try
             {
@@ -345,7 +345,7 @@ namespace SuperShop.View.POS
             }
         }
 
-        private void SearchCustomerbutton_Click(object sender, EventArgs e)
+        private void SearchCustomerbutton_Click(object? sender, EventArgs e)
         {
             try
             {
