@@ -410,7 +410,7 @@ namespace SuperShop.View.Admin
             IsActivecheckBox.Anchor = AnchorStyles.None;
             IsActivecheckBox.AutoSize = true;
             IsActivecheckBox.Font = new Font("Times New Roman", 12F);
-            IsActivecheckBox.Location = new Point(636, 286);
+            IsActivecheckBox.Location = new Point(636, 285);
             IsActivecheckBox.Name = "IsActivecheckBox";
             IsActivecheckBox.Size = new Size(81, 23);
             IsActivecheckBox.TabIndex = 168;

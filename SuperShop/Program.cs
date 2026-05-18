@@ -1,5 +1,6 @@
 using SuperShop.View.Admin;
 using SuperShop.View.Cashier;
+using SuperShop.View.Dashboard;
 namespace SuperShop
 {
     internal static class Program
@@ -13,7 +14,7 @@ namespace SuperShop
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new AddAdminGUI());
+            Application.Run(new AdminDashboard());
         }
     }
 }

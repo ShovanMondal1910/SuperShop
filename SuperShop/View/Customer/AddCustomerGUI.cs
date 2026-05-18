@@ -74,27 +74,7 @@ namespace SuperShop.View.Customer
             }
         }
 
-        private void ClearAllFields()
-        {
-            FullNametextBox.Clear();
-            PhoneNumbertextBox.Clear();
-            EmailtextBox.Clear();
-            AddressrichTextBox.Clear();
-            UsernametextBox.Clear();
-            PasswordtextBox.Clear();
-            DateOfBirthdatePicker.Value = DateTime.Now;
-            SecurityAnswertextBox.Clear();
-            CustomerIDtextBox.Clear();
-            TotalPurchasetextBox.Clear();
-            LoyaltyPointstextBox.Clear();
-            MaleradioButton.Checked = false;
-            FemaleradioButton.Checked = false;
-            SecurityQuestioncomboBox.SelectedIndex = -1;
-            CustomerTypecomboBox.SelectedIndex = -1;
-            UserTypecomboBox.SelectedIndex = -1;
-            IsActivecheckBox.Checked = false;
-            IsVIPcheckBox.Checked = false;
-        }
+        
 
         private bool AddCustomerToDatabase(SuperShop.Models.Customer customer)
         {
@@ -105,7 +85,8 @@ namespace SuperShop.View.Customer
                 conn.Open();
                 // Insert into USER table first
                 string userQuery = "INSERT INTO [USER] (UserID, UserType, Name, DateOfBirth, Gender, Phone, Email, Address, Username, Password, SecurityQuestion, SecurityAnswer, IsActive) " +
-                    "VALUES ('" + customer.UserID.Replace("'", "''") + "', 'Customer', '" + customer.Name.Replace("'", "''") + "', '" + customer.DateOfBirth.ToString("yyyy/MM/dd") + "', '" + customer.Gender.Replace("'", "''") + "', '" + customer.Phone.Replace("'", "''") + "', '" + customer.Email.Replace("'", "''") + "', '" + customer.Address.Replace("'", "''") + "', '" + customer.Username.Replace("'", "''") + "', '" + customer.Password.Replace("'", "''") + "', '" + customer.SecurityQuestion.Replace("'", "''") + "', '" + customer.SecurityAnswer.Replace("'", "''") + "', " + (customer.IsActive ? 1 : 0) + ")";
+                    "VALUES ('" + customer.UserID.Replace("'", "''") + "', 'Customer', '" + customer.Name.Replace("'", "''") + "', '" + customer.DateOfBirth.ToString("yyyy/MM/dd") + "', '" +
+                    customer.Gender.Replace("'", "''") + "', '" + customer.Phone.Replace("'", "''") + "', '" + customer.Email.Replace("'", "''") + "', '" + customer.Address.Replace("'", "''") + "', '" + customer.Username.Replace("'", "''") + "', '" + customer.Password.Replace("'", "''") + "', '" + customer.SecurityQuestion.Replace("'", "''") + "', '" + customer.SecurityAnswer.Replace("'", "''") + "', " + (customer.IsActive ? 1 : 0) + ")";
 
                 // Insert into CUSTOMER table
                 string customerQuery = "INSERT INTO [CUSTOMER] (CustomerID, CustomerType, UserID, TotalPurchase, IsVIP, LoyaltyPoints) " +
@@ -240,6 +221,27 @@ namespace SuperShop.View.Customer
             this.Close();
         }
 
+        private void ClearAllFields()
+        {
+            FullNametextBox.Clear();
+            PhoneNumbertextBox.Clear();
+            EmailtextBox.Clear();
+            AddressrichTextBox.Clear();
+            UsernametextBox.Clear();
+            PasswordtextBox.Clear();
+            DateOfBirthdatePicker.Value = DateTime.Now;
+            SecurityAnswertextBox.Clear();
+            CustomerIDtextBox.Clear();
+            TotalPurchasetextBox.Clear();
+            LoyaltyPointstextBox.Clear();
+            MaleradioButton.Checked = false;
+            FemaleradioButton.Checked = false;
+            SecurityQuestioncomboBox.SelectedIndex = -1;
+            CustomerTypecomboBox.SelectedIndex = -1;
+            UserTypecomboBox.SelectedIndex = -1;
+            IsActivecheckBox.Checked = false;
+            IsVIPcheckBox.Checked = false;
+        }
         private void Clearbutton_Click(object sender, EventArgs e)
         {
             ClearAllFields();

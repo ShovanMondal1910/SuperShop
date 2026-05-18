@@ -227,7 +227,14 @@ namespace SuperShop.View.Admin
                 }
             }
         }
-
+        private string GetSelectedDegrees()
+        {
+            List<string> degrees = new List<string>();
+            if (BCScheckBox.Checked) degrees.Add("BSC");
+            if (MSCcheckBox.Checked) degrees.Add("MSC");
+            if (PhDcheckBox.Checked) degrees.Add("PhD");
+            return string.Join(", ", degrees);
+        }
         private bool DeleteAdminFromDatabase()
         {
             SqlConnection conn = DatabaseConnection.GetConnection();
@@ -310,14 +317,7 @@ namespace SuperShop.View.Admin
             return true;
         }
 
-        private string GetSelectedDegrees()
-        {
-            List<string> degrees = new List<string>();
-            if (BCScheckBox.Checked) degrees.Add("BSC");
-            if (MSCcheckBox.Checked) degrees.Add("MSC");
-            if (PhDcheckBox.Checked) degrees.Add("PhD");
-            return string.Join(", ", degrees);
-        }
+        
 
         private void RefreshAdminList()
         {

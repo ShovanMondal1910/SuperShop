@@ -43,6 +43,7 @@ namespace SuperShop.View.Admin
                 return;
             }
 
+
             // Create Admin object from form data
             SuperShop.Models.Admin admin = new SuperShop.Models.Admin(
                 UserIDtextBox.Text,
@@ -83,30 +84,7 @@ namespace SuperShop.View.Admin
             return string.Join(", ", degrees);
         }
 
-        private void ClearAllFields()
-        {
-            UserIDtextBox.Clear();
-            FullNametextBox.Clear();
-            PhoneNumbertextBox.Clear();
-            EmailtextBox.Clear();
-            AddressrichTextBox.Clear();
-            UsernametextBox.Clear();
-            PasswordtextBox.Clear();
-            SecurityAnswertextBox.Clear();
-            AdminIDtextBox.Clear();
-            MaleradioButton.Checked = false;
-            FemaleradioButton.Checked = false;
-            SecurityQuestioncomboBox.SelectedIndex = -1;
-            comboBox1.SelectedIndex = -1;
-            AdminTypecomboBox.SelectedIndex = -1;
-            IsActivecheckBox.Checked = false;
-            BCScheckBox.Checked = false;
-            MSCcheckBox.Checked = false;
-            PhDcheckBox.Checked = false;
-            CanManageAdmincheckBox.Checked = false;
-            CanManageManagercheckBox.Checked = false;
-            IsActivecheckBox.Checked = false;
-        }
+        
 
         private bool AddAdminToDatabase(SuperShop.Models.Admin admin)
         {
@@ -246,11 +224,36 @@ namespace SuperShop.View.Admin
 
             return true;
         }
+        // Cancel button event handler to close the form
         private void Cancelbutton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        private void ClearAllFields()
+        {
+            UserIDtextBox.Clear();
+            FullNametextBox.Clear();
+            PhoneNumbertextBox.Clear();
+            EmailtextBox.Clear();
+            AddressrichTextBox.Clear();
+            UsernametextBox.Clear();
+            PasswordtextBox.Clear();
+            SecurityAnswertextBox.Clear();
+            AdminIDtextBox.Clear();
+            MaleradioButton.Checked = false;
+            FemaleradioButton.Checked = false;
+            SecurityQuestioncomboBox.SelectedIndex = -1;
+            comboBox1.SelectedIndex = -1;
+            AdminTypecomboBox.SelectedIndex = -1;
+            IsActivecheckBox.Checked = false;
+            BCScheckBox.Checked = false;
+            MSCcheckBox.Checked = false;
+            PhDcheckBox.Checked = false;
+            CanManageAdmincheckBox.Checked = false;
+            CanManageManagercheckBox.Checked = false;
+            IsActivecheckBox.Checked = false;
+        }
+        // Clear button event handler to clear all fields
         private void Clearbutton_Click(object sender, EventArgs e)
         {
             ClearAllFields();
